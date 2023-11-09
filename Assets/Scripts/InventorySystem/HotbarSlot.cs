@@ -17,11 +17,10 @@ public class HotbarSlot : MonoBehaviour
     {
         icon.enabled = false;
         index = transform.GetSiblingIndex();
-        text.text = index.ToString();
-        
+        text.text = (index + 1).ToString();
+
         // Add listener to button
         GetComponent<Button>().onClick.AddListener(OnClick);
-        
     }
 
     public void SetItem(InventoryItemData item)
@@ -30,28 +29,19 @@ public class HotbarSlot : MonoBehaviour
         icon.sprite = item.icon;
         icon.enabled = true;
     }
-    
+
     public void ClearSlot()
     {
         item = null;
         icon.sprite = null;
         icon.enabled = false;
     }
-    
+
     public void OnClick()
     {
-        Debug.Log("Clicked slot " + index);
-        
-        if (HotbarController.Instance.selectedSlot == index)
-        {
-            HotbarController.Instance.DropActiveItem();
-        }
-        else
-        {
-            HotbarController.Instance.selectedSlot = index;
-        }
+        HotbarController.Instance.selectedSlot = index;
     }
-    
+
     public void UpdateSelectedSlotUI()
     {
         if (HotbarController.Instance.selectedSlot == index)
