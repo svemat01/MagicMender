@@ -18,24 +18,36 @@ public class ClintMovement : MonoBehaviour
     {
         if (Input.GetKey("up"))
         {
+            animator.SetFloat("Speed", 0);
+            animator.SetFloat("Speed2", 0);
+            animator.SetFloat("Speed3", 0);
             animator.SetFloat("Speed4", moveSpeed);
             Vector3 v = transform.up * moveSpeed;  // -transform.right = left
             GetComponent<Rigidbody2D>().velocity = v;  // Sets velocity to left movement
         }
         else if (Input.GetKey("down"))
         {
+            animator.SetFloat("Speed", 0);
+            animator.SetFloat("Speed3", 0);
+            animator.SetFloat("Speed4", 0);
             animator.SetFloat("Speed2", moveSpeed);
             Vector3 v = -transform.up * moveSpeed;  // -transform.right = left
             GetComponent<Rigidbody2D>().velocity = v;  // Sets velocity to left movement
         }
         else if (Input.GetKey("left"))
         {
+            animator.SetFloat("Speed", 0);
+            animator.SetFloat("Speed2", 0);
+            animator.SetFloat("Speed4", 0);
             animator.SetFloat("Speed3", moveSpeed);
             Vector3 v = -transform.right * moveSpeed;  // -transform.right = left
             GetComponent<Rigidbody2D>().velocity = v;  // Sets velocity to left movement
         }
         else if (Input.GetKey("right"))
         {
+            animator.SetFloat("Speed2", 0);
+            animator.SetFloat("Speed3", 0);
+            animator.SetFloat("Speed4", 0);
             animator.SetFloat("Speed", moveSpeed);
             Vector3 v = transform.right * moveSpeed;  // -transform.right = left
             GetComponent<Rigidbody2D>().velocity = v;  // Sets velocity to left movement
