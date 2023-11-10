@@ -3578,25 +3578,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &327838114 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7165076452852529146, guid: e245051a309705546a7aa2a12e709800, type: 3}
-  m_PrefabInstance: {fileID: 1117385063}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &327838119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327838114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e9a661767aed304b8dda030701b6111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recipes: []
-  maxDistance: 2
 --- !u!1 &776533782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6802,10 +6783,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7165076452852529146, guid: e245051a309705546a7aa2a12e709800, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 327838119}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e245051a309705546a7aa2a12e709800, type: 3}
 --- !u!4 &1224102585 stripped
 Transform:
@@ -6823,26 +6801,6 @@ PrefabInstance:
     - target: {fileID: 1311176523401358059, guid: ccc6da95c0463402fa4cf98e8c56fe2d, type: 3}
       propertyPath: m_Name
       value: ClintPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 2138200601537375602, guid: ccc6da95c0463402fa4cf98e8c56fe2d, type: 3}
-      propertyPath: m_Size.x
-      value: 0.21070099
-      objectReference: {fileID: 0}
-    - target: {fileID: 2138200601537375602, guid: ccc6da95c0463402fa4cf98e8c56fe2d, type: 3}
-      propertyPath: m_Size.y
-      value: 0.16211125
-      objectReference: {fileID: 0}
-    - target: {fileID: 2138200601537375602, guid: ccc6da95c0463402fa4cf98e8c56fe2d, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.004960686
-      objectReference: {fileID: 0}
-    - target: {fileID: 2138200601537375602, guid: ccc6da95c0463402fa4cf98e8c56fe2d, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.15906873
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315167759095766702, guid: ccc6da95c0463402fa4cf98e8c56fe2d, type: 3}
-      propertyPath: moveSpeed
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7936387657359556331, guid: ccc6da95c0463402fa4cf98e8c56fe2d, type: 3}
       propertyPath: m_LocalPosition.x
