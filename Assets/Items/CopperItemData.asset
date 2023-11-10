@@ -15,4 +15,4 @@ MonoBehaviour:
   id: Copper
   displayName: Copper
   icon: {fileID: 21300000, guid: 2e5335565be2349cc8b15405b86773d1, type: 3}
-  prefab: {fileID: 7533966639263956554, guid: d5af96f4f5b2bbf4ca948e4f6e7c0934, type: 3}
+  prefab: {fileID: 8663048612136632109, guid: 3d13683ba859be04bbec701e0963dc08, type: 3}
