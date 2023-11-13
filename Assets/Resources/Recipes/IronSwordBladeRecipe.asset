@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec7bd9882bc403340be5929217019940, type: 3}
-  m_Name: AmethystToIron
+  m_Name: IronSwordBladeRecipe
   m_EditorClassIdentifier: 
-  id: amtoir
+  id: iron_sword_blade
   ingredients:
-  - {fileID: 11400000, guid: a1c937928297753479f0dbde14663be7, type: 2}
-  results:
   - {fileID: 11400000, guid: 9f5e496c7277b433a934fdeb90648e70, type: 2}
+  - {fileID: 11400000, guid: 26a3fda1b80674992b6ab7b7967b57cc, type: 2}
+  results:
+  - {fileID: 11400000, guid: 2834d704acac84f20a55b637b56f8a2e, type: 2}
+  - {fileID: 11400000, guid: 26a3fda1b80674992b6ab7b7967b57cc, type: 2}
+  canBeOrdered: 0

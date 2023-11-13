@@ -364,35 +364,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e4d48048793894e44bd0a2aa0bb182e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.12
+      value: 2.52
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e4d48048793894e44bd0a2aa0bb182e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1
+      value: 4.924
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e4d48048793894e44bd0a2aa0bb182e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e4d48048793894e44bd0a2aa0bb182e8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9999949
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e4d48048793894e44bd0a2aa0bb182e8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0032211554
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e4d48048793894e44bd0a2aa0bb182e8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e4d48048793894e44bd0a2aa0bb182e8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e4d48048793894e44bd0a2aa0bb182e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 359.631
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e4d48048793894e44bd0a2aa0bb182e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -478,7 +478,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9a661767aed304b8dda030701b6111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipes: []
+  recipes:
+  - {fileID: 11400000, guid: 20deb3a54582649c2b4909d9b29f1c44, type: 2}
+  - {fileID: 11400000, guid: 67822a37d0c804c56a94308d560bb582, type: 2}
   maxDistance: 2
   craftingPopup: {fileID: 7102671230136366392}
 --- !u!4 &7963082800059244447 stripped
