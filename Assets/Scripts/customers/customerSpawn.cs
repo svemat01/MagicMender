@@ -45,7 +45,7 @@ public class CustomerSpawn : MonoBehaviour
     {
         System.Random randomCustomer = new System.Random();
 
-        currentCustomerObject = Instantiate(CustomerPrefab, new Vector3(0.5f, 1, 0), Quaternion.identity);
+        currentCustomerObject = Instantiate(CustomerPrefab, transform.position, Quaternion.identity);
         var spriteRenderer = currentCustomerObject.GetComponent<SpriteRenderer>();
         var sprite = Resources.Load<Sprite>("Sprites/Customers/customer" + (randomCustomer.Next(3) + 1));
         spriteRenderer.sprite = sprite;

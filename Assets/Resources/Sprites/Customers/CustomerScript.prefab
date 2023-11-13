@@ -50,3 +50,4 @@ MonoBehaviour:
   MoveSpeed: 10
   Orders:
   - {fileID: 11400000, guid: 53a7d9541c3394e59972a165dc3a83ed, type: 2}
+  - {fileID: 11400000, guid: 322796c9dc3d445a4b6c73d1705d02bc, type: 2}
