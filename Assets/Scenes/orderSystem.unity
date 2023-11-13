@@ -590,6 +590,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416b32eca6f9e4de3b29d406249b2261, type: 3}
+--- !u!1001 &359034255
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6169632991215603310, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_Name
+      value: WoodHandleCopperSwordItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.631311
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9854364
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
 --- !u!1001 &368036890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -798,6 +855,120 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6601538181256224128, guid: 416b32eca6f9e4de3b29d406249b2261, type: 3}
   m_PrefabInstance: {fileID: 2056883131}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &454835092
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6169632991215603310, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_Name
+      value: WoodHandleCopperSwordItem (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.631311
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9854364
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+--- !u!1001 &497088592
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6169632991215603310, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_Name
+      value: WoodHandleCopperSwordItem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.631311
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9854364
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
 --- !u!1001 &601157370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -986,6 +1157,7 @@ GameObject:
   - component: {fileID: 795754872}
   - component: {fileID: 795754871}
   - component: {fileID: 795754874}
+  - component: {fileID: 795754875}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1061,7 +1233,7 @@ Transform:
   m_GameObject: {fileID: 795754870}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -2.05, y: -1.23, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1111,11 +1283,82 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &795754875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795754870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f18abef9adf34945895d444f7b8885e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1528164065}
+  lerpSpeed: 2
 --- !u!224 &805573508 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6601538181256224128, guid: 416b32eca6f9e4de3b29d406249b2261, type: 3}
   m_PrefabInstance: {fileID: 2046505782}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &935901142
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6169632991215603310, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_Name
+      value: WoodHandleCopperSwordItem (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.631311
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9854364
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
 --- !u!1001 &984674041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1270,6 +1513,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416b32eca6f9e4de3b29d406249b2261, type: 3}
+--- !u!1001 &1159036656
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6169632991215603310, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_Name
+      value: WoodHandleCopperSwordItem (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.631311
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9854364
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091094393301073965, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9d9a8767c01745f4a76e63f1369130e, type: 3}
 --- !u!1 &1160831202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,6 +1831,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416b32eca6f9e4de3b29d406249b2261, type: 3}
+--- !u!4 &1528164065 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7936387657359556331, guid: ccc6da95c0463402fa4cf98e8c56fe2d, type: 3}
+  m_PrefabInstance: {fileID: 2079683970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1611598823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2282,18 +2587,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CustomerScript
       objectReference: {fileID: 0}
-    - target: {fileID: 5566042242563769137, guid: bc7a68d695ce13448b0109dba8ee3ee7, type: 3}
-      propertyPath: CustomerBubble
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566042242563769137, guid: bc7a68d695ce13448b0109dba8ee3ee7, type: 3}
-      propertyPath: Orders.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5566042242563769137, guid: bc7a68d695ce13448b0109dba8ee3ee7, type: 3}
-      propertyPath: Orders.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 53a7d9541c3394e59972a165dc3a83ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2378,3 +2671,8 @@ SceneRoots:
   - {fileID: 681579009}
   - {fileID: 441067290201585712}
   - {fileID: 2079683970}
+  - {fileID: 359034255}
+  - {fileID: 497088592}
+  - {fileID: 454835092}
+  - {fileID: 1159036656}
+  - {fileID: 935901142}
