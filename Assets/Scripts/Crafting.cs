@@ -8,8 +8,14 @@ public class Crafting : MonoBehaviour
     private List<InventoryItemData> items = new List<InventoryItemData>();
 
     public CraftingRecipe[] recipes;
+    
+    [CanBeNull]
+    public CraftingRecipe CachedRecipe { get; private set; }
 
     public float maxDistance = 2f;
+    
+    [CanBeNull]
+    public CraftingPopup craftingPopup;
 
     void Update()
     {
@@ -20,9 +26,17 @@ public class Crafting : MonoBehaviour
             if (selectedItem != null && items.Count < 10)
             {
                 items.Add(selectedItem);
+                CachedRecipe = null; // Clear the cached recipe
+                
+                if (craftingPopup != null)
+                {
+                    craftingPopup.UpdateItems(items.ToArray());
+                }
 
                 // Remove the item from the hotbar
                 HotbarController.Instance.ClearSlot(HotbarController.Instance.selectedSlot);
+                
+                
             } else if (selectedItem == null && items.Count > 0)
             {
                 // If no item is selected, try to add the item from the furnace to the hotbar
@@ -30,6 +44,12 @@ public class Crafting : MonoBehaviour
                 {
                     // Remove the item from the furnace
                     items.RemoveAt(0);
+                    CachedRecipe = null; // Clear the cached recipe
+                
+                    if (craftingPopup != null)
+                    {
+                        craftingPopup.UpdateItems(items.ToArray());
+                    }
                 }
             }
         }
@@ -53,6 +73,12 @@ public class Crafting : MonoBehaviour
         // if no recipe is found, return null
 
         if (items.Count == 0) return null;
+        
+        // Check if we have a cached recipe
+        if (CachedRecipe != null)
+        {
+            return CachedRecipe;
+        }
 
         foreach (var recipe in recipes)
         {
@@ -79,6 +105,7 @@ public class Crafting : MonoBehaviour
             }
             if (recipeFound)
             {
+                CachedRecipe = recipe;
                 return recipe;
             }
         }
@@ -88,25 +115,6 @@ public class Crafting : MonoBehaviour
 
     public bool TryCraft()
     {
-        // foreach (var recipe in recipes)
-        // {
-        //     if (recipe.ingredients.Length != 2) continue;
-
-        //     if ((recipe.ingredients[0].id == item1.id && recipe.ingredients[1].id == item2.id) ||
-        //         (recipe.ingredients[0].id == item2.id && recipe.ingredients[1].id == item1.id))
-        //     {
-        //         // Remove the ingredient items
-        //         items.Remove(item1);
-        //         items.Remove(item2);
-
-        //         // Instantiate the result items
-        //         foreach (var result in recipe.results)
-        //         {
-        //             Instantiate(result, transform.position, Quaternion.identity);
-        //         }
-        //         break;
-        //     }
-        // }
         var recipe = FindCraftingRecipe();
 
         // No recipe found, return false
@@ -114,6 +122,12 @@ public class Crafting : MonoBehaviour
 
         // Crafting recipe found, remove the items from the furnace
         items.Clear();
+        CachedRecipe = null; // Clear the cached recipe
+                
+        if (craftingPopup != null)
+        {
+            craftingPopup.UpdateItems(items.ToArray());
+        }
 
         // Add the result items to hotbar, if full drop them on the ground
         foreach (var result in recipe.results)
