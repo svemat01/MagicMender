@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: f9b851129af7de6449b26779feed914f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4517ff78ec96c5347ab8771a7c0598ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -172,3 +172,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipes: []
+  maxDistance: 2
+  craftingPopup: {fileID: 0}
