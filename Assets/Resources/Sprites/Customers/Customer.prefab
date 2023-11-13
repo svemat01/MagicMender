@@ -296,7 +296,7 @@ MonoBehaviour:
   CustomerBubble: {fileID: 6205103610754454092}
   Order: []
   ItemPreviewPrefab: {fileID: 7813387471690900275, guid: 9c990f34597a24801a6339d5b4e37156, type: 3}
-  maxDistance: 2
+  maxDistance: 5
 --- !u!1 &6205103610754454092
 GameObject:
   m_ObjectHideFlags: 0
