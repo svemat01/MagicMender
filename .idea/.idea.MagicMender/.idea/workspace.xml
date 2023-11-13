@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2afaff81-65c9-4c28-a1aa-29e89bc5070e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MagicMender/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MagicMender/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/AmethystItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/AmethystItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/CopperItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/CopperItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/IronItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/IronItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FurnacePrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FurnacePrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WorkBenchPre.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WorkBenchPre.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Recipies.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Recipies/AmethystToIron.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Recipies/AmethystToIron.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Recipies/IronAndCopperToAmethyst.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Recipies/IronAndCopperToAmethyst.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoScen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoScen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CraftingRecipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CraftingRecipe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/HotbarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/HotbarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Orders/ironsword.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Orders/ironsword.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Orders/ironswordmagical.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Orders/ironswordmagical.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Items/amethyst.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Items/amethyst.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "workbench-anvil-demo",
+    "git-widget-placeholder": "ordering",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -117,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699440301140</updated>
       <workItem from="1699440302609" duration="22612000" />
-      <workItem from="1699866915943" duration="598000" />
+      <workItem from="1699866915392" duration="2160000" />
     </task>
     <servers />
   </component>
