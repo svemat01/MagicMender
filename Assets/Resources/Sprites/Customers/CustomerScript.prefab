@@ -45,3 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CustomerPrefab: {fileID: 4734041657512266579, guid: 3d76783436a66874eb4a7b9317599137, type: 3}
+  currentCustomer: 0
+  CustomerBubble: {fileID: 0}
+  MoveSpeed: 10
+  Orders:
+  - {fileID: 11400000, guid: 53a7d9541c3394e59972a165dc3a83ed, type: 2}
