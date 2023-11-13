@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4136e4b01c2664dc3bdc13c3b1ca203f, type: 3}
+  m_Name: CopperSwordBladeItemData
+  m_EditorClassIdentifier: 
+  id: copper_sword_blade
+  displayName: Copper Blade
+  icon: {fileID: 21300000, guid: 2db8a64471eb34db293718dc4a6295a1, type: 3}
+  prefab: {fileID: 3709515785344324453, guid: 4afab1a9d40454ae088922e046176206, type: 3}

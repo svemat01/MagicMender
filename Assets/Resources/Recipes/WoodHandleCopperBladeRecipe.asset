@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec7bd9882bc403340be5929217019940, type: 3}
-  m_Name: IronAndCopperToAmethyst
+  m_Name: WoodHandleCopperBladeRecipe
   m_EditorClassIdentifier: 
-  id: ICAmethyst
+  id: wood_handle_copper_blade_recipe
   ingredients:
-  - {fileID: 11400000, guid: 1db3709865556a44a9f8f38b4298cf5f, type: 2}
-  - {fileID: 11400000, guid: 9f5e496c7277b433a934fdeb90648e70, type: 2}
+  - {fileID: 11400000, guid: 33b11a1ed50464f5496d6de907ff2013, type: 2}
+  - {fileID: 11400000, guid: 5bf9056a269124a598e6a8d7f3880702, type: 2}
   results:
-  - {fileID: 11400000, guid: a1c937928297753479f0dbde14663be7, type: 2}
+  - {fileID: 11400000, guid: 53a7d9541c3394e59972a165dc3a83ed, type: 2}
+  canBeOrdered: 1

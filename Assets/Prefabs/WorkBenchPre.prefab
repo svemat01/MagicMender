@@ -367,7 +367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9a661767aed304b8dda030701b6111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipes: []
+  recipes:
+  - {fileID: 11400000, guid: 577bf9afd8d364472a71da7e8fbc6cde, type: 2}
+  - {fileID: 11400000, guid: a774d11974cb746c8b51490b3b7a6e06, type: 2}
   maxDistance: 2
   craftingPopup: {fileID: 4626680982273626185}
 --- !u!1 &8375127835256518601

@@ -6,4 +6,5 @@ public class CraftingRecipe : ScriptableObject
     public string id;
     public InventoryItemData[] ingredients;
     public InventoryItemData[] results;
+    public bool canBeOrdered;
 }

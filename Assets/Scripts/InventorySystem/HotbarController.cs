@@ -120,6 +120,6 @@ public class HotbarController : MonoBehaviour
         if (item == null) throw new System.Exception("No item in slot " + selectedSlot);
 
         ClearSlot(selectedSlot);
-        Instantiate(item.prefab, spawnPoint.position, Quaternion.identity);
+        Instantiate(item.prefab, PlayerController.Instance.transform.position, Quaternion.identity);
     }
 }
