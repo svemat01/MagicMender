@@ -5,6 +5,7 @@ using UnityEngine;
 public class CustomerScript : MonoBehaviour
 {
     public customerSpawn spawner;
+    public GameObject CustomerPrefab;
 
     private void OnMouseDown()
     {

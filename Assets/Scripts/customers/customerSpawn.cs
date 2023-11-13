@@ -11,13 +11,26 @@ public class customerSpawn : MonoBehaviour
     private GameObject currentCustomerObject;
     public GameObject CustomerBubble;
     private GameObject currentCustomerBubble;
+    public GameObject ItemPreview;
+    public InventoryItemData data;
+    
+    ItemPreview scriptName; // local variable to script instance in this object
 
     public float MoveSpeed = 10f;
+
+    string[][] orders;
 
     // Use this for initialization
     void Start()
     {
+        orders = new string[][]
+        {
+            new string[] { "order1", "ironsword" },
+            new string[] { "order2", "ironswordmagical" }
+        };
+         
         CustomerClick();
+        scriptName = gameObject.GetComponent<UpdateItem>(IronItem, 1);
     }
 
     // Update is called once per frame
@@ -30,7 +43,7 @@ public class customerSpawn : MonoBehaviour
     {
         System.Random randomCustomer = new System.Random();
 
-        currentCustomerObject = Instantiate(CustomerPrefab, new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
+        currentCustomerObject = Instantiate(CustomerPrefab, new Vector3(0.5f, 1, 0), Quaternion.identity);
         var spriteRenderer = currentCustomerObject.GetComponent<SpriteRenderer>();
         var sprite = Resources.Load<Sprite>("Sprites/Customers/customer" + (randomCustomer.Next(3) + 1));
         spriteRenderer.sprite = sprite;
@@ -41,8 +54,16 @@ public class customerSpawn : MonoBehaviour
 
         if (CustomerBubble != null)
         {
-            currentCustomerBubble = Instantiate(CustomerBubble, new Vector3(1, 2, 0), Quaternion.identity);
+            
+            // Instantiate the bubble as a child of the customer sprite
+            /*currentCustomerBubble = Instantiate(CustomerBubble, currentCustomerObject.transform);
+            currentCustomerBubble.transform.localPosition = new Vector3(0, 0, 0);
+
             var bubbleRenderer = currentCustomerBubble.GetComponent<SpriteRenderer>();
+            var bubbleSprite = Resources.Load<Sprite>("Orders/" + orders[1][1]);
+            Debug.Log(orders[1][1]);
+            bubbleRenderer.sprite = bubbleSprite;*/
+
             Debug.Log("Bubble Created");
         }
         else
@@ -50,6 +71,7 @@ public class customerSpawn : MonoBehaviour
             Debug.LogError("CustomerBubble is not assigned in the Inspector.");
         }
     }
+
 
     public void CustomerClick()
     {
