@@ -370,6 +370,7 @@ MonoBehaviour:
   recipes:
   - {fileID: 11400000, guid: a00bd4eb0249b5f47bbcd3c7a8ef5520, type: 2}
   - {fileID: 11400000, guid: e238f29bdecbba8429558543edb3ac02, type: 2}
+  - {fileID: 11400000, guid: dcea7f81af90ebb42b43740b9cdf3b80, type: 2}
   maxDistance: 2
   craftingPopup: {fileID: 8709408037066035522}
 --- !u!1 &8889642042989579421

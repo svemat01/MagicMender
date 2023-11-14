@@ -47,9 +47,12 @@ MonoBehaviour:
   CustomerPrefab: {fileID: 4734041657512266579, guid: 3d76783436a66874eb4a7b9317599137, type: 3}
   currentCustomer: 0
   CustomerBubble: {fileID: 0}
-  MoveSpeed: 10
+  movementDistance: 9
+  movementSpeed: 2
   Orders:
   - {fileID: 11400000, guid: 53a7d9541c3394e59972a165dc3a83ed, type: 2}
   - {fileID: 11400000, guid: 322796c9dc3d445a4b6c73d1705d02bc, type: 2}
   - {fileID: 11400000, guid: e9115f2b86b21424db6727694a91fdc5, type: 2}
   - {fileID: 11400000, guid: d45e51fdc0476944fa9b81a3cb632d47, type: 2}
+  - {fileID: 11400000, guid: 1245073158e561546932ae26466c92c6, type: 2}
+  - {fileID: 11400000, guid: ad8ef5bcc27133442b248f310e843d27, type: 2}
