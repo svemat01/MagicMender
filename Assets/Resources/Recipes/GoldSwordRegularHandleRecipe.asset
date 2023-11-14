@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7bd9882bc403340be5929217019940, type: 3}
+  m_Name: GoldSwordRegularHandleRecipe
+  m_EditorClassIdentifier: 
+  id: gold_sword_regular_handle_recipe
+  ingredients:
+  - {fileID: 11400000, guid: 4edb4009edb8167479ba827b91922a30, type: 2}
+  - {fileID: 11400000, guid: 5bf9056a269124a598e6a8d7f3880702, type: 2}
+  results:
+  - {fileID: 11400000, guid: 1245073158e561546932ae26466c92c6, type: 2}
+  canBeOrdered: 1
