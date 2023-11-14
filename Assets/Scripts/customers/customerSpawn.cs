@@ -30,9 +30,12 @@ public class CustomerSpawn : MonoBehaviour
         //     new string[] { "order1", "ironsword" },
         //     new string[] { "order2", "ironswordmagical" }
         // };
-         
-        CustomerClick();
+
+        // CustomerClick();
         // scriptName = gameObject.GetComponent<UpdateItem>(IronItem, 1);
+        Debug.Log("yeet");
+        Debug.Log(this);
+        CreateCustomer();
     }
 
     // Update is called once per frame
@@ -51,6 +54,7 @@ public class CustomerSpawn : MonoBehaviour
         spriteRenderer.sprite = sprite;
 
         var cSCript = currentCustomerObject.GetComponent<CustomerScript>();
+        Debug.Log(cSCript);
         cSCript.spawner = this;
         Debug.Log("Sprite Created");
         

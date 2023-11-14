@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4136e4b01c2664dc3bdc13c3b1ca203f, type: 3}
+  m_Name: PurpleAmethystMagicalItem
+  m_EditorClassIdentifier: 
+  id: purple_amethyst_magical_item
+  displayName: Magic Purple Amethyst
+  icon: {fileID: 21300000, guid: 061e9cacf483041318b1a764eaf05085, type: 3}
+  prefab: {fileID: 7533966639263956554, guid: d5af96f4f5b2bbf4ca948e4f6e7c0934, type: 3}
