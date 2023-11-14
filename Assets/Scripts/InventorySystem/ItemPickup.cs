@@ -19,7 +19,7 @@ public class ItemPickup : MonoBehaviour
         
         if (HotbarController.Instance.AddItem(itemData))
         {
-            Destroy(gameObject);
+            
         }
     }
 }
