@@ -16,7 +16,8 @@ public class CustomerSpawn : MonoBehaviour
     
     // ItemPreview scriptName; // local variable to script instance in this object
 
-    public float MoveSpeed = 10f;
+    public float movementDistance = 9.0f; // Distance to move
+    public float movementSpeed = 2.0f; // Speed of movement
 
     // string[][] orders;
 
@@ -59,26 +60,50 @@ public class CustomerSpawn : MonoBehaviour
         
         cSCript.SetOrder(new []{order});
 
-//         if (CustomerBubble != null)
-//         {
-//             
-//             // Instantiate the bubble as a child of the customer sprite
-//             /*currentCustomerBubble = Instantiate(CustomerBubble, currentCustomerObject.transform);
-//             currentCustomerBubble.transform.localPosition = new Vector3(0, 0, 0);
-//
-//             var bubbleRenderer = currentCustomerBubble.GetComponent<SpriteRenderer>();
-//             var bubbleSprite = Resources.Load<Sprite>("Orders/" + orders[1][1]);
-//             Debug.Log(orders[1][1]);
-//             bubbleRenderer.sprite = bubbleSprite;*/
-//
-//             Debug.Log("Bubble Created");
-//         }
-//         else
-//         {
-//             Debug.LogError("CustomerBubble is not assigned in the Inspector.");
-//         }
+        StartCoroutine(MoveCustomerRight());
+
+        //         if (CustomerBubble != null)
+        //         {
+        //             
+        //             // Instantiate the bubble as a child of the customer sprite
+        //             /*currentCustomerBubble = Instantiate(CustomerBubble, currentCustomerObject.transform);
+        //             currentCustomerBubble.transform.localPosition = new Vector3(0, 0, 0);
+        //
+        //             var bubbleRenderer = currentCustomerBubble.GetComponent<SpriteRenderer>();
+        //             var bubbleSprite = Resources.Load<Sprite>("Orders/" + orders[1][1]);
+        //             Debug.Log(orders[1][1]);
+        //             bubbleRenderer.sprite = bubbleSprite;*/
+        //
+        //             Debug.Log("Bubble Created");
+        //         }
+        //         else
+        //         {
+        //             Debug.LogError("CustomerBubble is not assigned in the Inspector.");
+        //         }
     }
 
+    IEnumerator MoveCustomerRight()
+    {
+        float elapsedTime = 0f;
+        Vector3 initialPosition = currentCustomerObject.transform.position;
+        Vector3 targetPosition = initialPosition + Vector3.right * movementDistance;
+
+        // Move the customer to the right over a specific duration
+        while (elapsedTime < movementSpeed)
+        {
+            currentCustomerObject.transform.position = Vector3.Lerp(initialPosition, targetPosition, (elapsedTime / movementSpeed));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        Debug.Log("Customer has moved to the right.");
+
+        // Pause for 2 seconds (adjust as needed)
+        yield return new WaitForSeconds(2f);
+
+        Debug.Log("Pause is over. Resuming game...");
+        // Resume the game or perform any other desired actions after the pause
+    }
 
     public void CustomerClick()
     {

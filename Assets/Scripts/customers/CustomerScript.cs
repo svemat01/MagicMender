@@ -9,7 +9,10 @@ public class CustomerScript : MonoBehaviour
     public InventoryItemData[] Order;
     public GameObject ItemPreviewPrefab;
     public float maxDistance = 5f;
-    
+
+    public float movementDistance = 9.0f; // Distance to move
+    public float movementSpeed = 2.0f; // Speed of movement
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, PlayerController.Instance.transform.position) < maxDistance)
@@ -91,13 +94,40 @@ public class CustomerScript : MonoBehaviour
     
     private void Despawn()
     {
+        // Start moving the sprite
+        StartCoroutine(MoveSpriteLeft());
+    }
+
+    IEnumerator MoveSpriteLeft()
+    {
+        float elapsedTime = 0f;
+        Vector3 initialPosition = transform.position;
+        Vector3 targetPosition = initialPosition + Vector3.left * movementDistance;
+
+        // Move the sprite to the left over a specific duration
+        while (elapsedTime < movementSpeed)
+        {
+            transform.position = Vector3.Lerp(initialPosition, targetPosition, (elapsedTime / movementSpeed));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        Debug.Log("Sprite has moved to the left.");
+
+        // Pause for 2 seconds (adjust as needed)
+        yield return new WaitForSeconds(3f);
+
+        Debug.Log("Pause is over. Resuming game...");
+        // Resume the game or perform any other desired actions after the pause
+
         spawner.CreateCustomer();
         Destroy(this.gameObject);
     }
-    private void OnMouseDown()
+
+    /*private void OnMouseDown()
     {
         spawner.CreateCustomer();
         Destroy(this.gameObject);
         // spawner.CustomerClick();
-    }
+    }*/
 }
