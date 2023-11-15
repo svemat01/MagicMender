@@ -5,21 +5,21 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     public InventoryItemData itemData;
+    private float maxDistance = 3f;
 
     private void OnMouseDown()
     {
-        // DISABLED until we've got proper player access
-        // if (Vector3.Distance(transform.position, PlayerController.Instance.transform.position) > 5f)
-        // {
-        //     Debug.Log("Too far away");
-        //     return;
-        // }
+        if (Vector2.Distance(transform.position, PlayerController.Instance.transform.position) > maxDistance)
+        {
+            Debug.Log("Too far away");
+            return;
+        }
         
         Debug.Log("Picked up " + itemData.name);
         
         if (HotbarController.Instance.AddItem(itemData))
         {
-            
+            Destroy(this.gameObject);
         }
     }
 }
