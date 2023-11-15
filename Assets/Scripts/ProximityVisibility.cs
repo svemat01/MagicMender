@@ -14,6 +14,7 @@ public class ProximityVisibility : MonoBehaviour
     private void Awake()
     {
         // debug log current position, offset and position with offset
+        Debug.Log(gameObject.name);
         Debug.Log("Current position: " + transform.position);
         Debug.Log("Offset: " + offset);
         Debug.Log("Position with offset: " + (transform.position + offset));
