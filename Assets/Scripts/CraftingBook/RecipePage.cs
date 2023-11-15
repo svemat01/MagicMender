@@ -17,7 +17,7 @@ public class RecipePage : MonoBehaviour
         {
             UpdateRecipeImages(recipe.ingredients, ingredientContainer);
             UpdateRecipeImages(recipe.results, resultContainer);
-            pagenumber.text = recipe.id.ToString(); // Add this line to display the recipe number as the page number
+            pagenumber.text = recipe.name.ToString(); // Add this line to display the recipe number as the page number
 
         }
     }
