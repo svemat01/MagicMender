@@ -36,7 +36,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerMoney = 10.0f;
         rb = GetComponent<Rigidbody2D>();
         
         movement = Vector2.zero;
