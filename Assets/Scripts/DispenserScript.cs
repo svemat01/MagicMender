@@ -28,12 +28,16 @@ public class DispenserScript : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E))
         {
-            var item = items[itemIndex % items.Length];
-            // if (PlayerController.Instance.money >= price)
-            // {
-            // PlayerController.Instance.money -= price;
-            HotbarController.Instance.AddItem(item);
-            // }
+            if(PlayerController.Instance.PlayerMoney >= 10){
+                var item = items[itemIndex % items.Length];
+                // if (PlayerController.Instance.money >= price)
+                // {
+                // PlayerController.Instance.money -= price;
+                HotbarController.Instance.AddItem(item);
+                // }
+                PlayerController.Instance.PlayerMoney -= 10;
+                Debug.Log(PlayerController.Instance.PlayerMoney);
+            }
         }
         
         if (Input.GetKeyDown(KeyCode.F))

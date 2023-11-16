@@ -13,6 +13,10 @@ public class CustomerScript : MonoBehaviour
     public float movementDistance = 9.0f; // Distance to move
     public float movementSpeed = 2.0f; // Speed of movement
 
+    void Start()
+    {
+        Debug.Log(PlayerController.Instance.PlayerMoney);
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, PlayerController.Instance.transform.position) < maxDistance)
@@ -96,6 +100,8 @@ public class CustomerScript : MonoBehaviour
     {
         // Start moving the sprite
         StartCoroutine(MoveSpriteLeft());
+        PlayerController.Instance.PlayerMoney += 50;
+        Debug.Log(PlayerController.Instance.PlayerMoney);
     }
 
     IEnumerator MoveSpriteLeft()

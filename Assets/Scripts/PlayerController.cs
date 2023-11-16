@@ -11,7 +11,7 @@ public enum PlayerItemAnimation
 public class PlayerController : MonoBehaviour
 {
 
-    public float PlayerMoney = 10.0f;
+    public float PlayerMoney = 0.0f;
     public static PlayerController Instance { get; private set; }
     public Rigidbody2D rb { get; private set; }
     public float moveSpeed = 5f;
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
+        PlayerMoney = 100.0f;
         Instance = this;
     }
 
