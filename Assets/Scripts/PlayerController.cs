@@ -10,6 +10,8 @@ public enum PlayerItemAnimation
 }
 public class PlayerController : MonoBehaviour
 {
+
+    public float PlayerMoney = 10.0f;
     public static PlayerController Instance { get; private set; }
     public Rigidbody2D rb { get; private set; }
     public float moveSpeed = 5f;
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerMoney = 10.0f;
         rb = GetComponent<Rigidbody2D>();
         
         movement = Vector2.zero;
