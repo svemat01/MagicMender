@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
 
     public Animator animator;
-    
+    public bool freeze = false;
     private Vector2 movement;
     
     public PlayerItemAnimation Item = PlayerItemAnimation.None;
@@ -45,6 +45,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (freeze)
+        {
+            movement = Vector2.zero;
+            return;
+        }
         // use input to set movement vector
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
