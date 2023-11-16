@@ -6,16 +6,21 @@ using UnityEngine;
 public class Crafting : MonoBehaviour
 {
     private List<InventoryItemData> items = new List<InventoryItemData>();
-
+    public float craftingTime = 2f;
     public CraftingRecipe[] recipes;
-    
+    private Animator animator;
     [CanBeNull]
     public CraftingRecipe CachedRecipe { get; private set; }
-
-    public float maxDistance = 2f;
-    
     [CanBeNull]
     public CraftingPopup craftingPopup;
+
+    public float maxDistance = 2f;
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }   
+    
+   
 
     void Update()
     {
@@ -56,16 +61,37 @@ public class Crafting : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F) && Vector2.Distance(transform.position, PlayerController.Instance.transform.position) < maxDistance)
         {
-            // Try to craft the items in the furnace
+          
+
+
+            if (HasAnimator() && !animator.GetCurrentAnimatorStateInfo(0).IsName("IsCrafting"))
+            {
+                animator.SetBool("IsCrafting", true);
+                // Try to craft the items in the furnace
+           
+            }
+            Invoke("crafting", craftingTime);
+
+        }
+    }
+
+    void crafting()
+    {
             var success = TryCraft();
             if (!success)
             {
                 Debug.Log("No recipe found");
+            if (HasAnimator() && !animator.GetCurrentAnimatorStateInfo(0).IsName("IsCrafting"))
+            {
+                animator.SetBool("IsCrafting", false);
+                // Try to craft the items in the furnace
             }
         }
-    }
+        }
 
-    [CanBeNull]
+
+
+[CanBeNull]
     public CraftingRecipe FindCraftingRecipe() {
         // loop thru all recipes and find one that matches the items in the furnace
         // the recipies have an unknown amount of ingredients, so we need to loop thru them as well. the order may also be different in items than ingredients so we need to check both ways
@@ -115,6 +141,8 @@ public class Crafting : MonoBehaviour
 
     public bool TryCraft()
     {
+  
+
         var recipe = FindCraftingRecipe();
 
         // No recipe found, return false
@@ -135,12 +163,28 @@ public class Crafting : MonoBehaviour
             if (!HotbarController.Instance.AddItem(result))
             {
                 Instantiate(result, transform.position, Quaternion.identity);
+
+               
             }
+        }
+
+        if (HasAnimator() && !animator.GetCurrentAnimatorStateInfo(0).IsName("IsCrafting"))
+        {
+            animator.SetBool("IsCrafting", false);
+            // Try to craft the items in the furnace
         }
 
         // Future code idea
         // RecipieControler.Instance.MarkCrafted(recipe)
 
         return true;
+
+
     }
+    private bool HasAnimator()
+    {
+        // Check if an animator component is attached to the game object
+        return animator != null;
+    }
+
 }
