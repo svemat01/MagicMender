@@ -290,7 +290,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4496206369379105839
@@ -494,6 +494,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1db3709865556a44a9f8f38b4298cf5f, type: 2}
   - {fileID: 11400000, guid: 9f5e496c7277b433a934fdeb90648e70, type: 2}
   - {fileID: 11400000, guid: 5bf9056a269124a598e6a8d7f3880702, type: 2}
+  - {fileID: 11400000, guid: c54be35e670505c4392805c09cb8e9fd, type: 2}
   itemIndex: 0
   maxDistance: 2
   offset: {x: 0, y: 0, z: 0}

@@ -292,11 +292,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1516378b80375d8449dcea22ee2c14a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayRef: {fileID: 0}
   spawner: {fileID: 0}
   CustomerBubble: {fileID: 6205103610754454092}
   Order: []
   ItemPreviewPrefab: {fileID: 7813387471690900275, guid: 9c990f34597a24801a6339d5b4e37156, type: 3}
   maxDistance: 5
+  movementDistance: 9
+  movementSpeed: 2
 --- !u!1 &6205103610754454092
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CustomerScript : MonoBehaviour
 {
+    public PlayerController PlayRef;
+
     public CustomerSpawn spawner;
     public GameObject CustomerBubble;
     public InventoryItemData[] Order;
@@ -96,6 +98,8 @@ public class CustomerScript : MonoBehaviour
     {
         // Start moving the sprite
         StartCoroutine(MoveSpriteLeft());
+        PlayRef.PlayerMoney += 50;
+        Debug.Log(PlayRef.PlayerMoney.ToString());
     }
 
     IEnumerator MoveSpriteLeft()
