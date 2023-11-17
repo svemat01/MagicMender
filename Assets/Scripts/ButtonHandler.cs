@@ -12,7 +12,7 @@ public class ButtonHandler : MonoBehaviour
     public void OpenOptions()
     {
         // Load the options scene
-        SceneManager.LoadScene("OptionsScene");
+        SceneManager.LoadScene("OptionsUi");
     }
 
     public void ExitGame()
