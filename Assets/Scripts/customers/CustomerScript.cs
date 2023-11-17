@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,12 +14,24 @@ public class CustomerScript : MonoBehaviour
     public float movementDistance = 9.0f; // Distance to move
     public float movementSpeed = 2.0f; // Speed of movement
 
+    public string timeStamp = "";
+    public long timeNow;
+
+    private float despawnTime = 10.0f; // Time in seconds before despawning
+    private float despawnTimer = 0.0f; // Timer to track despawn time
+    private bool isDespawning = false;
+
     void Start()
     {
         Debug.Log(PlayerController.Instance.PlayerMoney);
+        timeNow = DateTimeOffset.Now.ToUnixTimeSeconds();
+        timeStamp = timeNow.ToString();
+        despawnTimer = Time.time + despawnTime; // Set the despawn timer
+
     }
     void Update()
     {
+        timeNow = DateTimeOffset.Now.ToUnixTimeSeconds();
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, PlayerController.Instance.transform.position) < maxDistance)
         {
             //CHeck if current item is in order
@@ -54,8 +67,17 @@ public class CustomerScript : MonoBehaviour
                 if (orderComplete)
                 {
                     // Despawn the customer
+                    PlayerController.Instance.PlayerMoney += 50;
                     Despawn();
                 }
+            }
+        }
+        if (Time.time > despawnTimer)
+        {
+            if (!isDespawning)
+            {
+                Despawn(); // Despawn the customer when timer reaches one minute
+                isDespawning = true;
             }
         }
     }
@@ -100,7 +122,6 @@ public class CustomerScript : MonoBehaviour
     {
         // Start moving the sprite
         StartCoroutine(MoveSpriteLeft());
-        PlayerController.Instance.PlayerMoney += 50;
         Debug.Log(PlayerController.Instance.PlayerMoney);
     }
 
@@ -128,6 +149,7 @@ public class CustomerScript : MonoBehaviour
 
         spawner.CreateCustomer();
         Destroy(this.gameObject);
+        isDespawning = false;
     }
 
     /*private void OnMouseDown()
