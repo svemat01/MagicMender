@@ -17,7 +17,7 @@ public class CustomerScript : MonoBehaviour
     public string timeStamp = "";
     public long timeNow;
 
-    private float despawnTime = 10.0f; // Time in seconds before despawning
+    private float despawnTime = 60.0f; // Time in seconds before despawning
     private float despawnTimer = 0.0f; // Timer to track despawn time
     private bool isDespawning = false;
 
