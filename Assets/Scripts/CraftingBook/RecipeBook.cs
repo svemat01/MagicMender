@@ -53,14 +53,28 @@ public class RecipeBook : MonoBehaviour
     public void RightPage()
 
     {
+        if (currentPageIndex + 2 >= recipePagesContainer.childCount)
+        {
+            currentPageIndex += 0;
+            Debug.Log("currentPageIndex = " + currentPageIndex);
+        }
+        else
         currentPageIndex += 2;
         ShowCurrentPages();
+        Debug.Log("currentPageIndex = " + currentPageIndex);
     }
 
     public void LeftPage()
     {
+        if (currentPageIndex - 2 < 0)
+        {
+            currentPageIndex +=0;
+            Debug.Log("currentPageIndex = " + currentPageIndex);
+        }
+        else
         currentPageIndex -= 2;
         ShowCurrentPages();
+        Debug.Log("currentPageIndex = " + currentPageIndex);
     }
 
 
