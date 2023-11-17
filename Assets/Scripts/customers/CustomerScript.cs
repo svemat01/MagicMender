@@ -21,6 +21,8 @@ public class CustomerScript : MonoBehaviour
     private float despawnTimer = 0.0f; // Timer to track despawn time
     private bool isDespawning = false;
 
+    public float MoneyTime = 80.0f;
+
     void Start()
     {
         Debug.Log(PlayerController.Instance.PlayerMoney);
@@ -66,8 +68,17 @@ public class CustomerScript : MonoBehaviour
                 
                 if (orderComplete)
                 {
+                    float timeRemaining = despawnTimer - Time.time;
+                    if (timeRemaining <= 20.0f)
+                    {
+                        MoneyTime = 40.0f;
+                    }
+                    else
+                    {
+                        MoneyTime = 80.0f;
+                    }
                     // Despawn the customer
-                    PlayerController.Instance.PlayerMoney += 50;
+                    PlayerController.Instance.PlayerMoney += MoneyTime;
                     Despawn();
                 }
             }
