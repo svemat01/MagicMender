@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/clintidle.unity
     guid: 9b583f08908fb3d44a418d325b30d62b
+  - enabled: 1
+    path: Assets/Scenes/OptionsUi.unity
+    guid: 1f8a8f09d105f3442bcfa6654f48daf0
   m_configObjects: {}
