@@ -16,7 +16,15 @@ public class RecipeBook : MonoBehaviour
     void Awake()
     {
         recipes = Resources.LoadAll<CraftingRecipe>("Recipes");
-    
+
+        // Check if the number of recipes is odd and add an empty recipe if needed
+        if (recipes.Length % 2 != 0)
+        {
+            Debug.LogWarning("Number of recipes is odd. Adding an empty recipe.");
+            List<CraftingRecipe> tempList = new List<CraftingRecipe>(recipes);
+            tempList.Add(new CraftingRecipe()); // Assuming CraftingRecipe has a default constructor
+            recipes = tempList.ToArray();
+        }
     }
 
     void Start()

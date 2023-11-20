@@ -9,7 +9,7 @@ public class RecipePage : MonoBehaviour
     public Transform ingredientContainer;
     public Transform resultContainer;
     public GameObject imagePrefab; // Assign your Image UI prefab here
-
+    public GameObject CraftMarker;
     public Text pagenumber;
     public void SetRecipe(CraftingRecipe recipe)
     {
@@ -19,6 +19,13 @@ public class RecipePage : MonoBehaviour
             UpdateRecipeImages(recipe.results, resultContainer);
             pagenumber.text = recipe.name.ToString(); // Add this line to display the recipe number as the page number
 
+        }
+        
+
+        if (recipe.ingredients == null || recipe.ingredients.Length == 0)
+        {
+            Debug.LogWarning("Recipe is null.");
+            CraftMarker.SetActive(false);
         }
     }
 

@@ -95,6 +95,7 @@ MonoBehaviour:
   ingredientContainer: {fileID: 2845871647958234420}
   resultContainer: {fileID: 7568803319491769020}
   imagePrefab: {fileID: 7522299791890083987, guid: 1d90ae93e1cf3b742b84db7634843040, type: 3}
+  CraftMarker: {fileID: 8989133821652100369}
   pagenumber: {fileID: 7838018614417664520}
 --- !u!1 &4490967278580391359
 GameObject:
