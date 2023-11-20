@@ -68,7 +68,12 @@ public class Crafting : MonoBehaviour
             }
 
             // Play the audio when crafting starts
+
+            if (audioSource != null)
+            {
+
             audioSource.Play();
+            }
 
             Invoke("crafting", craftingTime);
         }
@@ -86,7 +91,11 @@ public class Crafting : MonoBehaviour
             }
 
             // Stop the audio when crafting finishes
-            audioSource.Stop();
+            if (audioSource != null)
+            {
+                audioSource.Stop();
+            }
+           
         }
     }
 
