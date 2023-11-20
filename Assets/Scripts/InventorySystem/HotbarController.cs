@@ -116,8 +116,9 @@ public class HotbarController : MonoBehaviour
     // Drop the current item, aka remove it from the inventory and spawn it in the world at the player's feet from a prefab
     public void DropActiveItem()
     {
+       
         InventoryItemData item = _slots[selectedSlot].item;
-        if (item == null) throw new System.Exception("No item in slot " + selectedSlot);
+        if (item == null) return;
 
         ClearSlot(selectedSlot);
         Instantiate(item.prefab, PlayerController.Instance.transform.position, Quaternion.identity);
