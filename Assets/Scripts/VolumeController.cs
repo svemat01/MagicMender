@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI; // Add this line
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VolumeController : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class VolumeController : MonoBehaviour
     public Slider backgroundMusicSlider;
     public Slider mainCharacterSlider;
     public Slider toolsAndItemsSlider;
-
 
     void Start()
     {
@@ -27,10 +27,20 @@ public class VolumeController : MonoBehaviour
         PlayerPrefs.SetFloat("MainCharacter", volume);
     }
 
-    public void SetToolsItemsVolume(float volume)
+    public void SetToolsAndItemsVolume(float volume)
     {
         mainMixer.SetFloat("ToolsAndItems", volume);
         PlayerPrefs.SetFloat("ToolsAndItems", volume);
+    }
+
+    public void SaveVolumeSettings()
+    {
+        PlayerPrefs.Save();
+    }
+
+    public void ExitToMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     private void LoadVolumeSettings()
