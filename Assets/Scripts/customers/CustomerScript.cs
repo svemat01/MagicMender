@@ -158,7 +158,7 @@ public class CustomerScript : MonoBehaviour
         Debug.Log("Pause is over. Resuming game...");
         // Resume the game or perform any other desired actions after the pause
 
-        spawner.CreateCustomer();
+        //spawner.CreateCustomer();
         Destroy(this.gameObject);
         isDespawning = false;
     }
