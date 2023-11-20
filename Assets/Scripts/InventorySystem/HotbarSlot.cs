@@ -6,12 +6,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class HotbarSlot : MonoBehaviour
 {
     [CanBeNull] public InventoryItemData item;
     private int index = 0;
     public TextMeshProUGUI text;
     public Image icon;
+    public GameObject bg;
+    public Sprite hotbar_chosen;
+    public Sprite hotbar;
 
     private void Awake()
     {
@@ -46,13 +50,15 @@ public class HotbarSlot : MonoBehaviour
     {
         if (HotbarController.Instance.selectedSlot == index)
         {
-            text.color = Color.blue;
+            text.color = Color.white;
             text.fontWeight = FontWeight.Bold;
+            bg.GetComponent<Image>().sprite = hotbar_chosen;
         }
         else
         {
             text.color = Color.black;
             text.fontWeight = FontWeight.Regular;
+            bg.GetComponent<Image>().sprite = hotbar;
         }
     }
 }
