@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     
     public PlayerItemAnimation Item = PlayerItemAnimation.None;
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
         }
         PlayerMoney = 100.0f;
         Instance = this;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -57,6 +59,19 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", movement.sqrMagnitude);
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
+
+        // Play walking audio if moving
+        if (movement.sqrMagnitude > 0.0f)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            audioSource.Stop();
+        }
     }
     
     private void FixedUpdate()

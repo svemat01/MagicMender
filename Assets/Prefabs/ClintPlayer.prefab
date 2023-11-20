@@ -193,6 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 757d8393c617b4a3cadb88d5210deba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerMoney: 0
   moveSpeed: 4
   animator: {fileID: 4955227678793104772}
+  freeze: 0
   Item: 0
