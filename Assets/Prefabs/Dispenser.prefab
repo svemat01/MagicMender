@@ -586,7 +586,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Press F
 
-    to view resources
+    to rotate resources
 
 
     Press E
@@ -697,7 +697,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 3}
-  m_SizeDelta: {x: 2.5, y: 2}
+  m_SizeDelta: {x: 3, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5668732692384800782
 Canvas:
