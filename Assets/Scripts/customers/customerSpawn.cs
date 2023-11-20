@@ -46,7 +46,10 @@ public class CustomerSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.C)) {
+            Debug.Log("Creating Customer...");
+            CreateCustomer();
+        }
     }
 
     IEnumerator SpawnCustomerRoutine()
