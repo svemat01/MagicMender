@@ -19,6 +19,9 @@ public class CustomerSpawn : MonoBehaviour
     public float movementDistance = 9.0f; // Distance to move
     public float movementSpeed = 2.0f; // Speed of movement
 
+    public float minSpawnTime = 35f;
+    public float maxSpawnTime = 90f;
+
     // string[][] orders;
 
     public InventoryItemData[] Orders;
@@ -37,12 +40,23 @@ public class CustomerSpawn : MonoBehaviour
         Debug.Log("yeet");
         Debug.Log(this);
         CreateCustomer();
+        StartCoroutine(SpawnCustomerRoutine());
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Add any update logic if needed
+        
+    }
+
+    IEnumerator SpawnCustomerRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
+
+            CreateCustomer();
+        }
     }
 
     public void CreateCustomer()
