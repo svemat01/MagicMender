@@ -6,7 +6,7 @@ public class ButtonHandler : MonoBehaviour
     public void StartGame() // Renamed from Start to StartGame
     {
         // Load the game scene
-        SceneManager.LoadScene("DemoScen");
+        SceneManager.LoadScene("GameScene");
     }
 
     public void OpenOptions()
