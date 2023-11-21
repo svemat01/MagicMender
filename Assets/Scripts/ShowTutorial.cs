@@ -8,6 +8,7 @@ public class ShowTutorial : MonoBehaviour
     public static ShowTutorial instance;
 
     public GameObject tutorialToShow;
+    public GameObject Notice ;
     // Start is called before the first frame update'
 
     private void Awake()
@@ -26,6 +27,7 @@ public class ShowTutorial : MonoBehaviour
 void Start()
     {
       tutorialToShow.SetActive(false);
+        Notice.SetActive(true);
        
     }
 
@@ -37,7 +39,7 @@ void Start()
           
             
             toggleTutorial();
-            
+            Notice.SetActive(false);
 
         }
        
