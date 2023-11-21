@@ -20,7 +20,7 @@ public class CustomerSpawn : MonoBehaviour
     public float verticalMovementDistance = 3f;
     public float movementSpeed = 2.5f; // Speed of movement
 
-    public float minSpawnTime = 35f;
+    public float minSpawnTime = 20f;
     public float maxSpawnTime = 90f;
 
     public float completedCustomer = 0f;
@@ -53,14 +53,31 @@ public class CustomerSpawn : MonoBehaviour
             Debug.Log("Creating Customer...");
             CreateCustomer();
         }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            completedCustomer += 1;
+            Debug.Log("Completed Customers: " + completedCustomer);
+        }
     }
 
     IEnumerator SpawnCustomerRoutine()
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
-
+            maxSpawnTime = maxSpawnTime - (completedCustomer * 5);
+            if (maxSpawnTime >= (minSpawnTime + 1))
+            {
+                yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
+            }
+            if (maxSpawnTime < (minSpawnTime + 1))
+            {
+                maxSpawnTime = 21;
+                yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
+            }
+            else
+            {
+                yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
+            }
             CreateCustomer();
         }
     }
