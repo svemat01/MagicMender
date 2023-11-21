@@ -5030,7 +5030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
       propertyPath: messages.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
       propertyPath: messages.Array.data[1]
@@ -5038,21 +5038,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
       propertyPath: messages.Array.data[2]
+      value: Press [R] to view the game controls and the recipes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
+      propertyPath: messages.Array.data[3]
       value: Approach a customer to understand their needs. Faster service will give
         you more gold!
       objectReference: {fileID: 0}
     - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
-      propertyPath: messages.Array.data[3]
-      value: 'Press ''Q'' to drop unwanted items on the floor.           Consult
-        your Crafting Recipe Book by pressing ''R.'' '
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
       propertyPath: messages.Array.data[4]
-      value: Try to make as much money as possible before the end of the day!
+      value: Serve as many customers as you can! Angry customers will leave and you
+        will lose gold. If you are out of gold.... YOU LOSE!!!
       objectReference: {fileID: 0}
     - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
       propertyPath: messages.Array.data[5]
-      value: 
+      value: Good luck adventurer...
       objectReference: {fileID: 0}
     - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
       propertyPath: messages.Array.data[6]
