@@ -175,6 +175,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CustomerScript
       objectReference: {fileID: 0}
+    - target: {fileID: 5566042242563769137, guid: bc7a68d695ce13448b0109dba8ee3ee7, type: 3}
+      propertyPath: movementSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566042242563769137, guid: bc7a68d695ce13448b0109dba8ee3ee7, type: 3}
+      propertyPath: verticalMovementDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566042242563769137, guid: bc7a68d695ce13448b0109dba8ee3ee7, type: 3}
+      propertyPath: horizontalMovementDistance
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

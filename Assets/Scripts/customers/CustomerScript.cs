@@ -27,7 +27,6 @@ public class CustomerScript : MonoBehaviour
     private IEnumerator MoveSpriteLeftAndDownCoroutine;
 
     public bool orderComplete = true;
-    public float completedCustomer = 0f;
 
     void Start()
     {
@@ -87,8 +86,8 @@ public class CustomerScript : MonoBehaviour
                     // Despawn the customer
                     PlayerController.Instance.PlayerMoney += MoneyTime;
                     Despawn();
-                    completedCustomer += 1;
-                    Debug.Log("Completed Customers: " + completedCustomer);
+                    spawner.completedCustomer += 1;
+                    Debug.Log("Completed Customers: " + spawner.completedCustomer);
                 }
             }
         }
