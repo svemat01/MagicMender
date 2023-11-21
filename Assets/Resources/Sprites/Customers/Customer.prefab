@@ -353,6 +353,7 @@ MonoBehaviour:
   timeStamp: 
   timeNow: 0
   MoneyTime: 80
+  orderComplete: 1
 --- !u!82 &1586323973526196530
 AudioSource:
   m_ObjectHideFlags: 0
