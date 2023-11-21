@@ -3713,6 +3713,7 @@ GameObject:
   m_PrefabInstance: {fileID: 300268021}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!82 &300268027
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3811,6 +3812,8 @@ AudioSource:
     m_RotationOrder: 4
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &423737891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3905,6 +3908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       propertyPath: letterSpeed
       value: 0.07
       objectReference: {fileID: 0}
@@ -3941,6 +3945,10 @@ PrefabInstance:
       propertyPath: messages.Array.data[4]
       value: Approach a customer and engage in a dialogue to understand their needs.
 >>>>>>> Stashed changes
+=======
+      propertyPath: messages.Array.data[4]
+      value: Approach a customer and engage in a dialogue to understand their needs.
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3952,6 +3960,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2207404706319258064, guid: 93a7a8fc4580b4c1fb915b5d931f0a84, type: 3}
   m_PrefabInstance: {fileID: 694159766}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1 &454330686
 GameObject:
@@ -4028,6 +4037,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454330686}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!1 &462624471 stripped
@@ -4435,7 +4446,11 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 682.2, y: 450}
+=======
+  m_AnchoredPosition: {x: 640, y: 455.4}
+>>>>>>> Stashed changes
 =======
   m_AnchoredPosition: {x: 640, y: 455.4}
 >>>>>>> Stashed changes
@@ -8108,7 +8123,10 @@ RectTransform:
   - {fileID: 764354859}
   - {fileID: 462624475}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 454330687}
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   m_Father: {fileID: 0}
