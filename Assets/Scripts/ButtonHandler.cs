@@ -9,6 +9,12 @@ public class ButtonHandler : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
+    public void MainMenu() // Renamed from Menu to MainMenu
+    {
+        // Load the main menu scene
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void ExitGame()
     {
         #if UNITY_EDITOR
@@ -17,4 +23,5 @@ public class ButtonHandler : MonoBehaviour
             Application.Quit();
         #endif
     }
+
 }

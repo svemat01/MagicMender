@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum PlayerItemAnimation
 {
@@ -71,6 +72,13 @@ public class PlayerController : MonoBehaviour
         else
         {
             audioSource.Stop();
+        }
+
+        if(PlayerMoney <= 0.0f)
+        {
+
+            SceneManager.LoadScene("GameOver");
+
         }
     }
     
