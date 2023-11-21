@@ -8,6 +8,7 @@ using UnityEngine.Networking;
 
 public class GameoverScreen : MonoBehaviour
 {
+    public CustomerSpawn spawner;
     private int score = 0;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI errorText;
@@ -22,6 +23,7 @@ public class GameoverScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+         
         score = PlayerPrefs.GetInt("score");
         scoreText.text = "You served a total of " + score + " customers!";
         
@@ -36,7 +38,7 @@ public class GameoverScreen : MonoBehaviour
 
     public void NameUpdate()
     {
-        if (nameInput.text.Length > 0)
+        if (nameInput.text.Length > 2)
         {
             errorText.text = "";
         } else
@@ -45,12 +47,17 @@ public class GameoverScreen : MonoBehaviour
             errorText.color = Color.red;
         }
     }
+
+    public void showHighScore()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Highscores");
+    }
     
     public void SubmitScore()
     {
         if (isSubmitting) return;
         
-        if (nameInput.text.Length > 0)
+        if (nameInput.text.Length > 2)
         {
             StartCoroutine(SubmitScoreCoroutine());
         } else
@@ -98,6 +105,8 @@ public class GameoverScreen : MonoBehaviour
                 errorText.text = "";
 
                 ShowSuccessSection();
+
+                Invoke("showHighScore", 3);
             }
         }
         

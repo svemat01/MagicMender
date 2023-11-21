@@ -1002,7 +1002,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< Updated upstream
   m_Offset: {x: 0, y: 0}
+=======
+  m_Offset: {x: 0.00053197145, y: -0.38830522}
+>>>>>>> Stashed changes
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1013,7 +1017,11 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_Size: {x: 1, y: 1}
+=======
+  m_Size: {x: 0.92155504, y: 0.23402983}
+>>>>>>> Stashed changes
   m_EdgeRadius: 0
 --- !u!82 &4490514215012669744
 AudioSource:

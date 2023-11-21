@@ -23,7 +23,8 @@ public class CustomerSpawn : MonoBehaviour
     public float minSpawnTime = 20f;
     public float maxSpawnTime = 90f;
 
-    public float completedCustomer = 0f;
+    public int completedCustomer = 0;
+
 
     // string[][] orders;
 
@@ -46,6 +47,10 @@ public class CustomerSpawn : MonoBehaviour
         StartCoroutine(SpawnCustomerRoutine());
     }
 
+    public void OnDisable()
+    {
+        PlayerPrefs.SetInt("score", completedCustomer);
+    }
     // Update is called once per frame
     void Update()
     {

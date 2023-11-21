@@ -3712,6 +3712,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4295560887145411826, guid: 60f9c47c3cae7ea43aa5914d03a3d3b0, type: 3}
   m_PrefabInstance: {fileID: 300268021}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!82 &300268027
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3808,6 +3809,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &423737891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3901,6 +3904,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
+<<<<<<< Updated upstream
       propertyPath: letterSpeed
       value: 0.07
       objectReference: {fileID: 0}
@@ -3933,6 +3937,10 @@ PrefabInstance:
     - target: {fileID: 6790033449453155867, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
       propertyPath: messages.Array.data[6]
       value: 
+=======
+      propertyPath: messages.Array.data[4]
+      value: Approach a customer and engage in a dialogue to understand their needs.
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3944,6 +3952,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2207404706319258064, guid: 93a7a8fc4580b4c1fb915b5d931f0a84, type: 3}
   m_PrefabInstance: {fileID: 694159766}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &454330686
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,6 +4028,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454330686}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &462624471 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 995223222737779158, guid: efb3a22bf4f1916468c2b852a4f1dd53, type: 3}
@@ -4423,7 +4434,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 682.2, y: 450}
+=======
+  m_AnchoredPosition: {x: 640, y: 455.4}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764354860
@@ -8092,7 +8107,10 @@ RectTransform:
   - {fileID: 445930356}
   - {fileID: 764354859}
   - {fileID: 462624475}
+<<<<<<< Updated upstream
   - {fileID: 454330687}
+=======
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
