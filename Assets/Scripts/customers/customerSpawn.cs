@@ -23,6 +23,8 @@ public class CustomerSpawn : MonoBehaviour
     public float minSpawnTime = 35f;
     public float maxSpawnTime = 90f;
 
+    public float completedCustomer = 0f;
+
     // string[][] orders;
 
     public InventoryItemData[] Orders;
