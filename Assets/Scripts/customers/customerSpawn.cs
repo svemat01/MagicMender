@@ -16,8 +16,9 @@ public class CustomerSpawn : MonoBehaviour
     
     // ItemPreview scriptName; // local variable to script instance in this object
 
-    public float movementDistance = 9.0f; // Distance to move
-    public float movementSpeed = 2.0f; // Speed of movement
+    public float horizontalMovementDistance = 9.0f; // Distance to move
+    public float verticalMovementDistance = 3f;
+    public float movementSpeed = 2.5f; // Speed of movement
 
     public float minSpawnTime = 35f;
     public float maxSpawnTime = 90f;
@@ -107,17 +108,28 @@ public class CustomerSpawn : MonoBehaviour
     {
         float elapsedTime = 0f;
         Vector3 initialPosition = currentCustomerObject.transform.position;
-        Vector3 targetPosition = initialPosition + Vector3.right * movementDistance;
+        Vector3 horizontalTargetPosition = initialPosition + Vector3.right * horizontalMovementDistance;
+        Vector3 verticalTargetPosition = horizontalTargetPosition + Vector3.up * verticalMovementDistance; // Move up by 2 units
 
-        // Move the customer to the right over a specific duration
+        // Move the customer horizontally to the right over a specific duration
         while (elapsedTime < movementSpeed)
         {
-            currentCustomerObject.transform.position = Vector3.Lerp(initialPosition, targetPosition, (elapsedTime / movementSpeed));
+            currentCustomerObject.transform.position = Vector3.Lerp(initialPosition, horizontalTargetPosition, (elapsedTime / movementSpeed));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        Debug.Log("Customer has moved to the right.");
+        elapsedTime = 0f; // Reset the elapsed time for vertical movement
+
+        // Move the customer up vertically over a specific duration
+        while (elapsedTime < movementSpeed)
+        {
+            currentCustomerObject.transform.position = Vector3.Lerp(horizontalTargetPosition, verticalTargetPosition, (elapsedTime / movementSpeed));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        Debug.Log("Customer has moved to the right and up.");
 
         // Pause for 2 seconds (adjust as needed)
         yield return new WaitForSeconds(2f);

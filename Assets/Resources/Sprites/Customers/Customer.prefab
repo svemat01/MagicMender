@@ -347,7 +347,8 @@ MonoBehaviour:
   Order: []
   ItemPreviewPrefab: {fileID: 7813387471690900275, guid: 9c990f34597a24801a6339d5b4e37156, type: 3}
   maxDistance: 5
-  movementDistance: 9
+  horizontalMovementDistance: 9
+  verticalMovementDistance: 3
   movementSpeed: 2
   timeStamp: 
   timeNow: 0
