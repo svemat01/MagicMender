@@ -11,8 +11,9 @@ public class CustomerScript : MonoBehaviour
     public GameObject ItemPreviewPrefab;
     public float maxDistance = 5f;
 
-    public float movementDistance = 9.0f; // Distance to move
-    public float movementSpeed = 2.0f; // Speed of movement
+    public float horizontalMovementDistance = 9.0f; // Distance to move
+    public float verticalMovementDistance = 3.0f;
+    public float movementSpeed = 2.5f; // Speed of movement
 
     public string timeStamp = "";
     public long timeNow;
@@ -23,12 +24,19 @@ public class CustomerScript : MonoBehaviour
 
     public float MoneyTime = 80.0f;
 
+    private IEnumerator MoveSpriteLeftAndDownCoroutine;
+
+    public bool orderComplete = true;
+    public float completedCustomer = 0f;
+
     void Start()
     {
         Debug.Log(PlayerController.Instance.PlayerMoney);
         timeNow = DateTimeOffset.Now.ToUnixTimeSeconds();
         timeStamp = timeNow.ToString();
         despawnTimer = Time.time + despawnTime; // Set the despawn timer
+
+        MoveSpriteLeftAndDownCoroutine = MoveSpriteLeftAndDown();
 
     }
     void Update()
@@ -56,7 +64,6 @@ public class CustomerScript : MonoBehaviour
                 }
                 
                 // Check if order is complete
-                bool orderComplete = true;
                 foreach (var item in Order)
                 {
                     if (item != null)
@@ -80,6 +87,8 @@ public class CustomerScript : MonoBehaviour
                     // Despawn the customer
                     PlayerController.Instance.PlayerMoney += MoneyTime;
                     Despawn();
+                    completedCustomer += 1;
+                    Debug.Log("Completed Customers: " + completedCustomer);
                 }
             }
         }
@@ -87,8 +96,21 @@ public class CustomerScript : MonoBehaviour
         {
             if (!isDespawning)
             {
-                Despawn(); // Despawn the customer when timer reaches one minute
                 isDespawning = true;
+                PlayerController.Instance.PlayerMoney -= 10.0f;
+                StartCoroutine(MoveSpriteLeftAndDownCoroutine);
+                Despawn();
+                Debug.Log(PlayerController.Instance.PlayerMoney);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.X)) {
+            if (!isDespawning)
+            {
+                isDespawning = true;
+                PlayerController.Instance.PlayerMoney -= 10.0f;
+                StartCoroutine(MoveSpriteLeftAndDownCoroutine);
+                Despawn();
+                Debug.Log(PlayerController.Instance.PlayerMoney);
             }
         }
     }
@@ -132,36 +154,46 @@ public class CustomerScript : MonoBehaviour
     private void Despawn()
     {
         // Start moving the sprite
-        StartCoroutine(MoveSpriteLeft());
+        StartCoroutine(MoveSpriteLeftAndDown());
         Debug.Log(PlayerController.Instance.PlayerMoney);
     }
 
-    IEnumerator MoveSpriteLeft()
+    private IEnumerator MoveSpriteLeftAndDown()
     {
         float elapsedTime = 0f;
         Vector3 initialPosition = transform.position;
-        Vector3 targetPosition = initialPosition + Vector3.left * movementDistance;
+        Vector3 verticalTargetPosition = initialPosition + Vector3.down * verticalMovementDistance;
+        Vector3 horizontalTargetPosition = verticalTargetPosition + Vector3.left * horizontalMovementDistance; // Move up by 2 units
 
-        // Move the sprite to the left over a specific duration
+        // Move the customer horizontally to the right over a specific duration
         while (elapsedTime < movementSpeed)
         {
-            transform.position = Vector3.Lerp(initialPosition, targetPosition, (elapsedTime / movementSpeed));
+            transform.position = Vector3.Lerp(initialPosition, verticalTargetPosition, (elapsedTime / movementSpeed));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        Debug.Log("Sprite has moved to the left.");
+        elapsedTime = 0f; // Reset the elapsed time for vertical movement
+
+        // Move the customer up vertically over a specific duration
+        while (elapsedTime < movementSpeed)
+        {
+            transform.position = Vector3.Lerp(verticalTargetPosition, horizontalTargetPosition, (elapsedTime / movementSpeed));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        Debug.Log("Customer has moved to the right and up.");
 
         // Pause for 2 seconds (adjust as needed)
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.0f);
 
         Debug.Log("Pause is over. Resuming game...");
         // Resume the game or perform any other desired actions after the pause
-
-        //spawner.CreateCustomer();
         Destroy(this.gameObject);
-        isDespawning = false;
+
     }
+
 
     /*private void OnMouseDown()
     {
