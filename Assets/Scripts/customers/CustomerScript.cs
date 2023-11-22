@@ -18,6 +18,9 @@ public class CustomerScript : MonoBehaviour
     public string timeStamp = "";
     public long timeNow;
 
+    public float maxRemove = 65.0f;
+    public float minRemove = 10.0f;
+
     private float despawnTime = 60.0f; // Time in seconds before despawning
     private float despawnTimer = 0.0f; // Timer to track despawn time
     private bool isDespawning = false;
@@ -96,7 +99,16 @@ public class CustomerScript : MonoBehaviour
             if (!isDespawning)
             {
                 isDespawning = true;
-                PlayerController.Instance.PlayerMoney -= 10.0f;
+                minRemove = maxRemove - (spawner.completedCustomer * 5);
+                if (minRemove <= (maxRemove + 1))
+                {
+                    PlayerController.Instance.PlayerMoney -= minRemove;
+                }
+                else
+                {
+                    PlayerController.Instance.PlayerMoney -= maxRemove;
+                }
+                
                 StartCoroutine(MoveSpriteLeftAndDownCoroutine);
                 Despawn();
                 Debug.Log(PlayerController.Instance.PlayerMoney);
