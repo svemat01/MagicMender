@@ -21,7 +21,7 @@ public class CustomerSpawn : MonoBehaviour
     public float movementSpeed = 2.5f; // Speed of movement
 
     public float minSpawnTime = 20f;
-    public float maxSpawnTime = 90f;
+    public float maxSpawnTime = 80f;
 
     public int completedCustomer = 0;
 
@@ -74,15 +74,8 @@ public class CustomerSpawn : MonoBehaviour
             {
                 yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
             }
-            if (maxSpawnTime < (minSpawnTime + 1))
-            {
-                maxSpawnTime = 21;
-                yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
-            }
-            else
-            {
-                yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
-            }
+           
+            
             CreateCustomer();
         }
     }
